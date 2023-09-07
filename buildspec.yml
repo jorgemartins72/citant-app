@@ -13,6 +13,10 @@ phases:
         - echo Build started on `date`
         - echo Compiling the Node.js code...
         - npm run generate
+  post_build:
+    commands:
+      - echo PostBuild Phase
+      - aws s3 cp dist/ s3://citant.app --recursive
 
 artifacts:
   files:
