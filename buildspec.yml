@@ -17,7 +17,7 @@ phases:
     commands:
       - echo PostBuild Phase
       - aws s3 cp dist/ $S3_BUCKET --recursive
-      - aws cloudfront create-invalidation --distribution-id $DISTRIBUTION_ID_APP --paths "/*"
+      - aws cloudfront create-invalidation --distribution-id E2W547DFDI31JI --paths "/*"
 
 artifacts:
   files:
